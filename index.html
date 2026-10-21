@@ -1,484 +1,970 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfolio Danny Hernandez</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/favicon_io/favicon.ico">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny Hernandez | Enterprise AI, Cloud & Customer Success Executive</title>
+    <link rel="icon" href="https://dannydev.github.io/Portfolio/images/favicon_io/favicon.ico">
+    
+    <!-- Google Fonts: Cormorant Garamond (Classical Stoic Serif), Source Sans 3 (Clean Editorial Sans), IBM Plex Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS (CDN for zero-build GitHub Pages deployment) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    colors: {
+                        marble: {
+                            DEFAULT: '#F4F1EA',
+                            light: '#FAF8F5',
+                            dark: '#EAE5DB',
+                            border: '#DDD6C7'
+                        },
+                        terracotta: {
+                            DEFAULT: '#C86D51',
+                            dark: '#B0583E',
+                            light: '#F5E6E1'
+                        },
+                        olive: {
+                            DEFAULT: '#5F6F52',
+                            dark: '#4A573F',
+                            light: '#E8ECE4'
+                        },
+                        bronze: {
+                            DEFAULT: '#6E5A4F',
+                            light: '#8C766A',
+                            pale: '#EFECE9'
+                        },
+                        ink: {
+                            DEFAULT: '#2B2B2A',
+                            muted: '#4A4845',
+                            soft: '#1F1F1E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/portfolio_picture.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Danny Hernandez</a></h1>
-					<p>Customer Success Profesional<br />
-					Developing Humans since 2009 </p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Can Do</a></li>
-						<li><a href="#three">A Few Accomplishments</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/dannydevelops/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/DannyDev" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-						<li><a href="https://www.freecodecamp.org/dannydev" class="icon brands fa-free-code-camp" target="_blank"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+    <style>
+        /* Classical Stoic Editorial Styling */
+        body {
+            background-color: #F4F1EA;
+            color: #2B2B2A;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(200, 109, 81, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 40%, rgba(95, 111, 82, 0.06) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        
+        /* Warm Parchment Card with Architectural Border */
+        .stoic-card {
+            background: #FAF8F5;
+            border: 1px solid #DDD6C7;
+            box-shadow: 0 2px 10px -2px rgba(43, 43, 42, 0.04);
+            transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .stoic-card:hover {
+            border-color: #C86D51;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -8px rgba(110, 90, 79, 0.14);
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        /* Featured AI Cards with subtle Olive/Terracotta accent */
+        .ai-card {
+            background: linear-gradient(145deg, #FAF8F5 0%, #F3EFE6 100%);
+            border: 1px solid #C9C0B1;
+            border-top: 3px solid #C86D51;
+        }
+        .ai-card:hover {
+            border-color: #5F6F52;
+            border-top-color: #5F6F52;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        /* Iron Gall Ink Sidebar ("The Stoa") */
+        .stoa-sidebar {
+            background-color: #2B2B2A;
+            color: #F4F1EA;
+            border-right: 1px solid rgba(110, 90, 79, 0.35);
+        }
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/p_banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>About Me</h2>
-										<p>I am Customer and Data expert, with more than 15 years of experience in creating long lasting relationships between customers and cutting edge technologies.</p>
-									</header>
-									<p><b><u> MY MISSION </u></b> is to evangelize and facilitate the adoption of new
-										technologies by <i>"making everything as simple as possible, but not simpler" </i></p>
-								</div>
-							</section>
+        /* Sidebar Navigation States */
+        .nav-link {
+            border-left: 3px solid transparent;
+            color: #D6D1C7;
+        }
+        .nav-link:hover {
+            color: #F4F1EA;
+            background: rgba(244, 241, 234, 0.05);
+        }
+        .nav-link.active {
+            color: #F4F1EA;
+            background: rgba(200, 109, 81, 0.14);
+            border-left-color: #C86D51;
+        }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Can Do</h3>
-									<p>I have successfully worked with both internal and external customers. Below are just a few samples of common deliverables I regularly work on. (I can share more upon request)</p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-book"><a href="https://docs.google.com/document/d/1WWo6A3HCi1yEOe2SZ9nYSdgiJG9ean8JAqOhD19rDpY/edit?usp=sharing" target="_blank"><b>Develop and implement KPIs</b></a></li>
-										<li class="icon solid fa-book"><a href="https://public.tableau.com/app/profile/danny.hernandez2917/viz/CapstoneMentalHealthinthetechindustry/MentalHealthintheUStechindustry?publish=yes" target="_blank"> <b>Create/Present Compelling Data Stories </b></a></li>
-										<li class="icon solid fa-money-bill"><a href="https://docs.google.com/presentation/d/1VJqVxaCCY3kMEWcQKfrMvCQL7RInGRm-PJBAECuVV4E/edit?usp=sharing" target="_blank"> <b>Onboard Large Enterprise Customers </b></a></li>
-										<li class="icon solid fa-graduation-cap"> <a href="https://docs.google.com/document/d/1V6BibZXsQlnbQRcYMYWJ_LkFq_QJQPn5/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"> <b> Create Technical Onboarding Guidelines </b></a> </li>
-										<li class="icon solid fa-code"><a href="https://drive.google.com/file/d/1I0zIFyV8vQxdohaD5Nx9bzVaMJurYy-y/view?usp=sharing" target="_blank"><b>Simplify technical topics</b></a></li>
-										<li class="icon solid fa-users"><a href="https://docs.google.com/presentation/d/105ArPOLxLlhO06c_M8vjmcr5RhGnbshsfWd7XtH0S8k/edit?usp=sharing" target="_blank"><b>Create and lead Business Reviews</b></a></li>
-										<li class="icon brands fa-leanpub"><a href="https://docs.google.com/presentation/d/1RkoZbEmmsjD7eR95z3RoLEAia6d94RphS05TVOhyd2A/edit?usp=sharing" target="_blank" ><b>Create/Execute Customer Success Plans</b></a></li>
-										<li class="icon solid fa-clipboard"><a href="https://docs.google.com/document/d/1wMs_juYUiSUYc8tbT5Svy2QojM6YpqT5/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"><b>Create/Maintain Engagment Files</b></a></li>
-										<li class="icon solid fa-video"><a href="https://drive.google.com/file/d/1kn9Z_yL_07nd8yYwpfV8OoJfPxO0sUj4/view?usp=sharing" target="_blank"><b>Create Video Tutorials</b></a></li>
-										<li class="icon solid fa-file-pdf"><a href="https://drive.google.com/file/d/1ow18Qcef8YVtTEE1lyqjAFXyQdkL-XfG/view?usp=sharing" target="_blank"><b>Develop internal documentation</b></a></li>
-									</ul>
-								</div>
-							</section>
+        /* Filter Pill States */
+        .filter-btn {
+            background: #FAF8F5;
+            color: #6E5A4F;
+            border: 1px solid #DDD6C7;
+        }
+        .filter-btn:hover {
+            border-color: #6E5A4F;
+            color: #2B2B2A;
+        }
+        .filter-btn.active {
+            background: #2B2B2A;
+            color: #F4F1EA;
+            border-color: #2B2B2A;
+            box-shadow: 0 4px 12px rgba(43, 43, 42, 0.15);
+        }
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>A Few Accomplishments</h3>
-									<p>I am a "Learn-it-all" at heart and am always looking for new courses to take that can help me help my customers. Below are a couple of noticable Accomplishments</p>
-									<div class="features">
-										<article>
-											<a href="https://drive.google.com/file/d/1mwCwlwtIgm26aVORh5aa_6JS_s2cYAya/view?usp=sharing" target="_blank" class="image"><img src="images/odoo.svg" alt="Odoo Certification and President's club" /></a>
-											<div class="inner">
-												<h4>Odoo 2020 President's Club (top CSM) </h4>
-												<p>Recognition provided for consistently exceeding all Customer Success KPIs throughout the entire year and achieving the profesional Consultant level Odoo Funtional Certification. </p>
-											</div>
-										</article>
-										<article>
-											<a href="https://coursera.org/verify/specialization/2NHZ24QQ5HTW" target="_blank" class="image"><img src="images/python.jpg" alt="Python 5 course certification" /></a>
-											<div class="inner">
-												<h4> University of Michigan: Python for Everybody Specialization</h4>
-												<p>5 course Specialization (aprox. 8 months) that covers data structures, networked application program interfaces,
-													and databases, using the Python programming language to design and create your own applications for data
-													retrieval, processing, and visualization. </p>
-											</div>
-										</article>
-										<article>
-											<a href="https://www.apollographql.com/tutorials/certifications/c11c0712-81b2-411b-97b7-80eaaa5da038" class="image" target="_blank"><img src="images/apollo.jpg" alt="Graph Deceloper-Associate" /></a>
-											<div class="inner">
-												<h4>Graph Developer Associate </h4>
-												<p>5 course Specialization that provides Foundational knowledge of GraphQL and the Apollo tool suite to design a schema, run an Apollo Server, and perform queries with Apollo Client on the frontend.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://coursera.org/verify/specialization/34RBERYVY5WB" class="image" target="_blank"><img src="images/tableau.jpg" alt="Tableu 5 course certification" /></a>
-											<div class="inner">
-												<h4>University of California, Davis: Data visualization with Tableau  </h4>
-												<p>5 course Specialization that focuses on generating powerful data-driven reports and dashboards to create high-impact visualizations with the objective of improving business decision making.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+        /* Executive Lens Toggle */
+        .lens-btn.active {
+            background: #C86D51;
+            color: #F4F1EA;
+            font-weight: 600;
+        }
 
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Please reach out to me via <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank"> <b><u>LinkedIn</u></b></a> to connect.</p>
-								</div>
-							</section>
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+        /* Classical Divider Ornament */
+        .stoic-rule {
+            height: 1px;
+            background: linear-gradient(90deg, #C86D51 0%, #DDD6C7 50%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-terracotta selection:text-marble-light font-sans">
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+    <!-- Mobile Top Header -->
+    <header class="lg:hidden sticky top-0 z-50 stoa-sidebar px-5 py-3.5 flex items-center justify-between border-b border-bronze/40">
+        <div class="flex items-center gap-3">
+            <img src="https://dannydev.github.io/Portfolio/images/portfolio_picture.jpg" 
+                 onerror="this.src='https://ui-avatars.com/api/?name=Danny+Hernandez&background=C86D51&color=F4F1EA&size=128'" 
+                 alt="Danny Hernandez" class="w-10 h-10 rounded-full object-cover ring-2 ring-terracotta">
+            <div>
+                <h1 class="font-serif font-bold text-lg text-marble leading-tight tracking-wide">Danny Hernandez</h1>
+                <p class="text-xs text-marble/75 font-mono">Developing Humans Since 2009</p>
+            </div>
+        </div>
+        <button id="mobile-menu-btn" class="text-marble hover:text-terracotta p-2 rounded-lg bg-white/5">
+            <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+    </header>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed inset-0 z-40 bg-ink/98 backdrop-blur-md hidden flex-col justify-between p-6 lg:hidden text-marble">
+        <div class="mt-14 space-y-2">
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">I. About & Mission</a>
+            <a href="#capabilities" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">II. Things I Can Do (AI & CS)</a>
+            <a href="#experience" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">III. Executive Trajectory</a>
+            <a href="#accomplishments" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">IV. Accomplishments & Credentials</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">V. Connect</a>
+        </div>
+        <div class="flex justify-center gap-6 py-4 border-t border-bronze/40">
+            <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank" class="text-marble/70 hover:text-terracotta text-xl"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/DannyDev" target="_blank" class="text-marble/70 hover:text-marble text-xl"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:dhernandezm110@gmail.com" class="text-marble/70 hover:text-olive text-xl"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+    <div class="max-w-[1440px] mx-auto lg:flex min-h-screen">
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+        <!-- FIXED LEFT SIDEBAR: Iron Gall Ink (#2B2B2A) with Terracotta & Olive Accents -->
+        <aside class="hidden lg:flex lg:flex-col lg:justify-between lg:w-80 lg:fixed lg:inset-y-0 stoa-sidebar p-8 z-30 shadow-2xl">
+            <div>
+                <!-- Profile Avatar & Identity -->
+                <div class="text-center">
+                    <div class="relative inline-block">
+                        <img src="https://dannydev.github.io/Portfolio/images/portfolio_picture.jpg" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Danny+Hernandez&background=C86D51&color=F4F1EA&size=200'"
+                             alt="Danny Hernandez" 
+                             class="relative w-28 h-28 rounded-full object-cover mx-auto border-2 border-terracotta shadow-lg">
+                        <span class="absolute bottom-1 right-1 w-4 h-4 bg-olive border-2 border-ink rounded-full" title="Active in Bay Area / Remote"></span>
+                    </div>
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+                    <h1 class="mt-4 font-serif font-bold text-3xl text-marble tracking-wide">Danny Hernandez</h1>
+                    <p id="sidebar-role-title" class="mt-1 font-medium text-terracotta tracking-wide uppercase font-mono text-[11px]">Senior Director, CS & Services</p>
+                    <p class="mt-2.5 text-xs font-mono text-marble/80 bg-white/5 inline-block px-3.5 py-1 rounded-full border border-bronze/50">
+                        <i class="fa-solid fa-leaf text-olive mr-1.5"></i>Developing Humans since 2009
+                    </p>
+                </div>
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+                <!-- Perspective Toggle (CS Director vs. Technical PM Lens) -->
+                <div class="mt-7 bg-ink-soft p-1.5 rounded-xl border border-bronze/40">
+                    <p class="text-[10px] font-mono uppercase tracking-widest text-marble/60 text-center mb-1.5">Select Executive Lens</p>
+                    <div class="grid grid-cols-2 gap-1 text-xs font-medium">
+                        <button onclick="setLens('cs')" id="lens-cs" class="lens-btn active py-1.5 px-2 rounded-lg transition text-center">
+                            CS & Services
+                        </button>
+                        <button onclick="setLens('pm')" id="lens-pm" class="lens-btn text-marble/70 hover:text-marble py-1.5 px-2 rounded-lg transition text-center">
+                            Tech Program Mgr
+                        </button>
+                    </div>
+                </div>
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+                <!-- Navigation Links with Classical Roman Numeral Structure -->
+                <nav class="mt-7 space-y-1">
+                    <a href="#about" class="nav-link active flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
+                        <span class="font-serif italic text-terracotta w-5">I.</span>
+                        <span>About & Mission</span>
+                    </a>
+                    <a href="#capabilities" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
+                        <span class="font-serif italic text-terracotta w-5">II.</span>
+                        <span>Things I Can Do</span>
+                        <span class="ml-auto text-[10px] font-mono bg-olive/30 text-marble px-2 py-0.5 rounded border border-olive">14 Live</span>
+                    </a>
+                    <a href="#experience" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
+                        <span class="font-serif italic text-terracotta w-5">III.</span>
+                        <span>Career Impact</span>
+                    </a>
+                    <a href="#accomplishments" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
+                        <span class="font-serif italic text-terracotta w-5">IV.</span>
+                        <span>Accomplishments</span>
+                    </a>
+                    <a href="#contact" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
+                        <span class="font-serif italic text-terracotta w-5">V.</span>
+                        <span>Connect</span>
+                    </a>
+                </nav>
+            </div>
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+            <!-- Sidebar Footer Socials -->
+            <div class="pt-6 border-t border-bronze/40">
+                <div class="flex items-center justify-center gap-3.5">
+                    <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank" title="LinkedIn"
+                       class="w-10 h-10 rounded-lg bg-white/5 hover:bg-terracotta hover:text-marble flex items-center justify-center text-marble/75 transition border border-bronze/30">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="https://github.com/DannyDev" target="_blank" title="GitHub"
+                       class="w-10 h-10 rounded-lg bg-white/5 hover:bg-bronze hover:text-marble flex items-center justify-center text-marble/75 transition border border-bronze/30">
+                        <i class="fa-brands fa-github text-sm"></i>
+                    </a>
+                    <a href="mailto:dhernandezm110@gmail.com" title="Email Danny"
+                       class="w-10 h-10 rounded-lg bg-white/5 hover:bg-olive hover:text-marble flex items-center justify-center text-marble/75 transition border border-bronze/30">
+                        <i class="fa-solid fa-envelope text-sm"></i>
+                    </a>
+                    <a href="https://public.tableau.com/app/profile/danny.hernandez2917" target="_blank" title="Tableau Public"
+                       class="w-10 h-10 rounded-lg bg-white/5 hover:bg-terracotta hover:text-marble flex items-center justify-center text-marble/75 transition border border-bronze/30">
+                        <i class="fa-solid fa-chart-pie text-sm"></i>
+                    </a>
+                </div>
+                <p class="mt-4 text-[11px] text-center text-marble/60 font-mono">
+                    Walnut Creek, CA • Bilingual (EN/ES)
+                </p>
+            </div>
+        </aside>
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+        <!-- MAIN CONTENT AREA: Marble / Parchment (#F4F1EA) Canvas -->
+        <main class="flex-1 lg:pl-80">
+            <div class="max-w-5xl mx-auto px-6 py-12 sm:px-12 sm:py-16 space-y-24">
 
-								</div>
-							</section>
-						-->
+                <!-- I. HERO & ABOUT SECTION -->
+                <section id="about" class="scroll-mt-10">
+                    <!-- Top status pill -->
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-olive-light border border-olive/30 text-olive-dark text-xs font-mono font-medium mb-6">
+                        <span class="w-2 h-2 rounded-full bg-olive animate-pulse"></span>
+                        <span>Principal Services Solutions Manager @ Snowflake • AI, Lakehouse & Cloud Transformation</span>
+                    </div>
 
-					</div>
+                    <h2 id="hero-headline" class="font-serif font-bold text-4xl sm:text-6xl text-ink tracking-tight leading-[1.08]">
+                        Bridging Executive Wisdom with <span class="text-terracotta italic font-semibold">Agentic AI & Cloud Execution.</span>
+                    </h2>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy;  All rights reserved.</li><li>Design: <a href="https://www.linkedin.com/in/dannydevelops/">DannyDev</a></li>
-							</ul>
-						</div>
-					</section>
+                    <div class="stoic-rule my-6"></div>
 
-			</div>
+                    <p id="hero-summary" class="text-base sm:text-lg text-ink-muted leading-relaxed max-w-3xl">
+                        I am a customer-obsessed executive and data leader with <strong class="text-ink font-semibold">15+ years of experience</strong> building enduring, high-trust relationships between enterprise organizations and cutting-edge technologies across <strong class="text-ink font-semibold">Snowflake, YugabyteDB, and Apollo GraphQL</strong>—governing $30M+ portfolios with 100% net retention and &gt;90% services attach.
+                    </p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                    <!-- Original Mission Quote Preserved & Styled as a Classical Inscription -->
+                    <div class="mt-8 stoic-card rounded-xl p-6 sm:p-8 border-l-4 border-l-terracotta bg-marble-light">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-terracotta-light border border-terracotta/30 flex items-center justify-center text-terracotta shrink-0 mt-1">
+                                <i class="fa-solid fa-landmark"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono uppercase tracking-widest text-bronze font-semibold">First Principle & Mission</span>
+                                <p class="mt-1.5 font-serif text-xl sm:text-2xl text-ink leading-snug">
+                                    To evangelize and facilitate the adoption of transformative technologies by <em class="text-terracotta font-semibold">“making everything as simple as possible, but not simpler.”</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-	</body>
+                    <!-- Executive Impact Metrics Bar -->
+                    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="stoic-card rounded-xl p-5 border-t-2 border-t-ink">
+                            <p class="text-3xl sm:text-4xl font-serif font-bold text-ink">$30M+</p>
+                            <p class="mt-1 text-xs font-mono uppercase tracking-wider text-bronze">Portfolio Governed</p>
+                        </div>
+                        <div class="stoic-card rounded-xl p-5 border-t-2 border-t-olive">
+                            <p class="text-3xl sm:text-4xl font-serif font-bold text-olive">100%</p>
+                            <p class="mt-1 text-xs font-mono uppercase tracking-wider text-bronze">Net Retention & Delivery</p>
+                        </div>
+                        <div class="stoic-card rounded-xl p-5 border-t-2 border-t-terracotta">
+                            <p class="text-3xl sm:text-4xl font-serif font-bold text-terracotta">&gt;90%</p>
+                            <p class="mt-1 text-xs font-mono uppercase tracking-wider text-bronze">Services Attach Rate</p>
+                        </div>
+                        <div class="stoic-card rounded-xl p-5 border-t-2 border-t-bronze">
+                            <p class="text-3xl sm:text-4xl font-serif font-bold text-bronze">140%</p>
+                            <p class="mt-1 text-xs font-mono uppercase tracking-wider text-bronze">Peak NRR & Quota</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- II. THINGS I CAN DO (All 14 Live Artifacts Linked to Google Drive & Tableau) -->
+                <section id="capabilities" class="scroll-mt-10">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-marble-border pb-6">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-terracotta font-semibold">II • Craft & Deliverables</span>
+                            <h3 class="mt-1 font-serif font-bold text-3xl sm:text-4xl text-ink">Things I Can Do</h3>
+                            <p class="mt-2 text-sm text-ink-muted max-w-2xl">
+                                Every card below is a <span class="text-terracotta font-semibold">Live Artifact</span>—click any card to inspect real enterprise AI blueprints, architecture diagrams, EBR decks, and governance playbooks.
+                            </p>
+                        </div>
+
+                        <!-- Category Filter Pills -->
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="filterCapabilities('all')" class="filter-btn active text-xs font-mono font-medium px-3.5 py-2 rounded-lg transition" data-filter="all">
+                                All (14)
+                            </button>
+                            <button onclick="filterCapabilities('ai')" class="filter-btn text-xs font-mono font-medium px-3.5 py-2 rounded-lg transition" data-filter="ai">
+                                <i class="fa-solid fa-compass-drafting mr-1 text-terracotta"></i> AI & Agentic Workflows
+                            </button>
+                            <button onclick="filterCapabilities('cs')" class="filter-btn text-xs font-mono font-medium px-3.5 py-2 rounded-lg transition" data-filter="cs">
+                                <i class="fa-solid fa-scale-balanced mr-1 text-olive"></i> CS & Governance
+                            </button>
+                            <button onclick="filterCapabilities('data')" class="filter-btn text-xs font-mono font-medium px-3.5 py-2 rounded-lg transition" data-filter="data">
+                                <i class="fa-solid fa-scroll mr-1 text-bronze"></i> Data, Ops & Docs
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Capabilities Grid -->
+                    <div id="capabilities-grid" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                        <!-- NEW AI SKILL 1 (Linked to Google Drive Blueprint) -->
+                        <a href="https://docs.google.com/document/d/1ntPzCxumCsSDQY04LtGFkNILfmpGhNzg/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
+                           class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-terracotta-light text-terracotta flex items-center justify-center border border-terracotta/25 group-hover:bg-terracotta group-hover:text-marble transition">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-terracotta-light text-terracotta-dark font-medium">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Architect & Deploy Agentic AI Workflows</h4>
+                                <p class="mt-2 text-sm text-ink-muted leading-relaxed">
+                                    Guide enterprise adoption of autonomous multi-step AI agents, natural language business assistants (Snowflake CoWork / Cortex AI), and AI-assisted software engineering workflows (Cortex Code / CoCo).
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border flex items-center justify-between text-xs text-terracotta font-mono font-medium">
+                                <span>Open Agentic Workflow Blueprint →</span>
+                            </div>
+                        </a>
+
+                        <!-- NEW AI SKILL 2 (Linked to Google Drive Blueprint) -->
+                        <a href="https://docs.google.com/document/d/1ntPzCxumCsSDQY04LtGFkNILfmpGhNzg/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
+                           class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-olive-light text-olive flex items-center justify-center border border-olive/25 group-hover:bg-olive group-hover:text-marble transition">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-olive-light text-olive-dark font-medium">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-olive transition">Professional AI Prompting & Context Engineering</h4>
+                                <p class="mt-2 text-sm text-ink-muted leading-relaxed">
+                                    Design 4-layer system prompts, chain-of-thought reasoning templates, and RAG grounding frameworks that turn raw LLMs into disciplined executive reporting, SOW scoping, and RAID governance engines.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border flex items-center justify-between text-xs text-olive font-mono font-medium">
+                                <span>View Prompting & RAG Blueprint →</span>
+                            </div>
+                        </a>
+
+                        <!-- NEW AI SKILL 3 (Linked to Google Drive Cloud Migration Playbook) -->
+                        <a href="https://docs.google.com/document/d/1b1Il4s4rFWWvtK34MDs10_ZS8lxtkwhW/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
+                           class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-bronze-pale text-bronze flex items-center justify-center border border-bronze/25 group-hover:bg-bronze group-hover:text-marble transition">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-bronze-pale text-bronze font-medium">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Enterprise AI Readiness & Medallion Lakehouses</h4>
+                                <p class="mt-2 text-sm text-ink-muted leading-relaxed">
+                                    Scope and govern end-to-end cloud migrations (off legacy Oracle, SQL Server, and BigQuery) into clean Bronze/Silver/Gold Medallion Lakehouse foundations ready for production GenAI.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border flex items-center justify-between text-xs text-terracotta font-mono font-medium">
+                                <span>Open Cloud & AI Migration Playbook →</span>
+                            </div>
+                        </a>
+
+                        <!-- NEW AI SKILL 4 (Linked to Google Drive Telemetry Engine Architecture) -->
+                        <a href="https://docs.google.com/document/d/1VIPyHnnPUKlWNNowYSAZ3xqVvjTXlU3l/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
+                           class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-terracotta-light text-terracotta flex items-center justify-center border border-terracotta/25 group-hover:bg-terracotta group-hover:text-marble transition">
+                                        <i class="fa-solid fa-gears"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-terracotta-light text-terracotta-dark font-medium">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">AI-Powered Cross-Tool Telemetry Engines</h4>
+                                <p class="mt-2 text-sm text-ink-muted leading-relaxed">
+                                    Architect automated single-source-of-truth workflow systems connecting Salesforce, Zendesk, Jira, and Slack to predict churn risk, accelerate escalations, and govern $30M+ ARR portfolios.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border flex items-center justify-between text-xs text-terracotta font-mono font-medium">
+                                <span>View Telemetry Engine Architecture →</span>
+                            </div>
+                        </a>
+
+                        <!-- ORIGINAL DELIVERABLES (1-10) -->
+                        <a href="https://docs.google.com/document/d/1WWo6A3HCi1yEOe2SZ9nYSdgiJG9ean8JAqOhD19rDpY/edit?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="cs">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-bronze flex items-center justify-center group-hover:bg-terracotta group-hover:text-marble transition">
+                                        <i class="fa-solid fa-bullseye"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze group-hover:text-terracotta-dark transition">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Develop & Implement KPI Frameworks</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Design measurable operational metrics for NRR expansion, services attach rate (&gt;90%), and billable utilization (&gt;75%).
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-terracotta font-mono font-medium">
+                                View KPI Strategy Document →
+                            </div>
+                        </a>
+
+                        <a href="https://public.tableau.com/app/profile/danny.hernandez2917/viz/CapstoneMentalHealthinthetechindustry/MentalHealthintheUStechindustry?publish=yes" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="data">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-olive flex items-center justify-center group-hover:bg-olive group-hover:text-marble transition">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze group-hover:text-olive-dark transition">
+                                        Interactive Tableau <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-olive transition">Create & Present Compelling Data Stories</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Translate complex multi-dimensional datasets into executive dashboards that drive strategic decision-making.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-olive font-mono font-medium">
+                                Explore Live Tableau Viz →
+                            </div>
+                        </a>
+
+                        <a href="https://docs.google.com/presentation/d/1VJqVxaCCY3kMEWcQKfrMvCQL7RInGRm-PJBAECuVV4E/edit?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="cs">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-olive flex items-center justify-center group-hover:bg-olive group-hover:text-marble transition">
+                                        <i class="fa-solid fa-compass"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze group-hover:text-olive-dark transition">
+                                        Slide Deck <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-olive transition">Onboard Large Enterprise Customers</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Standardize multi-tier enterprise kickoff and onboarding journeys that compress time-to-first-value (TTV).
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-olive font-mono font-medium">
+                                View Enterprise Onboarding Deck →
+                            </div>
+                        </a>
+
+                        <a href="https://docs.google.com/document/d/1V6BibZXsQlnbQRcYMYWJ_LkFq_QJQPn5/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="data">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-bronze flex items-center justify-center group-hover:bg-terracotta group-hover:text-marble transition">
+                                        <i class="fa-solid fa-drafting-compass"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze group-hover:text-terracotta-dark transition">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Create Technical Onboarding Guidelines</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Author repeatable implementation blueprints, milestone checklists, and SLA governance frameworks for delivery teams.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-terracotta font-mono font-medium">
+                                Open Technical Playbook →
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1I0zIFyV8vQxdohaD5Nx9bzVaMJurYy-y/view?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="data">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-bronze flex items-center justify-center group-hover:bg-bronze group-hover:text-marble transition">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Simplify Complex Technical Topics</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Distill distributed SQL, GraphQL schemas, and cloud data architectures into clear guides for business and engineering stakeholders.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-bronze font-mono font-medium">
+                                View Technical Simplification Sample →
+                            </div>
+                        </a>
+
+                        <a href="https://docs.google.com/presentation/d/105ArPOLxLlhO06c_M8vjmcr5RhGnbshsfWd7XtH0S8k/edit?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="cs">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-olive flex items-center justify-center group-hover:bg-olive group-hover:text-marble transition">
+                                        <i class="fa-solid fa-people-arrows"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze">
+                                        Slide Deck <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-olive transition">Create & Lead Executive Business Reviews</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Run high-impact EBRs/QBRs with C-suite sponsors that align technical adoption milestones with ROI and expansion roadmaps.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-olive font-mono font-medium">
+                                View EBR / QBR Presentation →
+                            </div>
+                        </a>
+
+                        <a href="https://docs.google.com/presentation/d/1RkoZbEmmsjD7eR95z3RoLEAia6d94RphS05TVOhyd2A/edit?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="cs">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-terracotta flex items-center justify-center group-hover:bg-terracotta group-hover:text-marble transition">
+                                        <i class="fa-solid fa-map-location-dot"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze">
+                                        Slide Deck <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Create & Execute Customer Success Plans</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Build joint accountability roadmaps and MEDDIC/MEDICC OKR frameworks that turn implementation goals into measurable value.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-terracotta font-mono font-medium">
+                                View Success Plan Template →
+                            </div>
+                        </a>
+
+                        <a href="https://docs.google.com/document/d/1wMs_juYUiSUYc8tbT5Svy2QojM6YpqT5/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="cs">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-bronze flex items-center justify-center group-hover:bg-bronze group-hover:text-marble transition">
+                                        <i class="fa-solid fa-folder-tree"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Create & Maintain Engagement Files</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Maintain rigorous account governance, RAID logs, and stakeholder maps across multi-region enterprise programs.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-bronze font-mono font-medium">
+                                Open Engagement Governance File →
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1kn9Z_yL_07nd8yYwpfV8OoJfPxO0sUj4/view?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="data">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-terracotta flex items-center justify-center group-hover:bg-terracotta group-hover:text-marble transition">
+                                        <i class="fa-solid fa-clapperboard"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze">
+                                        Video Sample <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Produce Technical Video Tutorials</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Script and produce engaging video walkthroughs and enablement series that scale self-service customer adoption.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-terracotta font-mono font-medium">
+                                Watch Video Tutorial Sample →
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1ow18Qcef8YVtTEE1lyqjAFXyQdkL-XfG/view?usp=sharing" target="_blank"
+                           class="capability-card stoic-card rounded-xl p-6 flex flex-col justify-between group" data-category="data">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="w-9 h-9 rounded-lg bg-marble-dark text-olive flex items-center justify-center group-hover:bg-olive group-hover:text-marble transition">
+                                        <i class="fa-solid fa-book-open"></i>
+                                    </span>
+                                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-marble-dark text-bronze">
+                                        Live Artifact <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+                                    </span>
+                                </div>
+                                <h4 class="font-serif font-bold text-xl text-ink group-hover:text-olive transition">Develop Internal Documentation & Playbooks</h4>
+                                <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
+                                    Build internal knowledge bases and operational SOPs (previously cut new analyst onboarding time by 75% via Lean Six Sigma).
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-marble-border text-xs text-olive font-mono font-medium">
+                                View Documentation Artifact →
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+
+                <!-- III. CAREER IMPACT TIMELINE -->
+                <section id="experience" class="scroll-mt-10">
+                    <div class="border-b border-marble-border pb-6">
+                        <span class="text-xs font-mono uppercase tracking-widest text-terracotta font-semibold">III • Executive Trajectory</span>
+                        <h3 class="mt-1 font-serif font-bold text-3xl sm:text-4xl text-ink">Enterprise Leadership & Delivery</h3>
+                        <p class="mt-2 text-sm text-ink-muted">
+                            Use the <span class="text-terracotta font-semibold">Executive Lens toggle</span> in the sidebar to switch emphasis between Customer Success Leadership and Technical Program Governance.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 space-y-6 relative before:absolute before:inset-0 before:left-4 sm:before:left-6 before:w-0.5 before:bg-gradient-to-b before:from-terracotta before:via-olive before:to-bronze/30">
+
+                        <div class="relative pl-12 sm:pl-16">
+                            <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-terracotta ring-4 ring-marble"></div>
+                            <div class="stoic-card rounded-xl p-6 sm:p-7">
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-mono text-terracotta font-medium">Feb 2026 – Present • Bay Area, CA / Remote</span>
+                                        <h4 class="font-serif font-bold text-2xl text-ink mt-0.5">Snowflake</h4>
+                                        <p class="text-sm font-semibold text-bronze">Principal Services Solutions Manager (Majors Acquisitions)</p>
+                                    </div>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-terracotta-light text-terracotta-dark border border-terracotta/30 font-medium">
+                                        US West & LATAM
+                                    </span>
+                                </div>
+                                <ul class="mt-4 space-y-2 text-sm text-ink-muted list-disc list-inside leading-relaxed">
+                                    <li><strong class="text-ink">Enterprise Cloud Migrations & SOW Scoping:</strong> Partner with C-suite sponsors to author SOWs, WBS, and staffing models for large-scale migrations off legacy Oracle, SQL Server, and Google BigQuery.</li>
+                                    <li><strong class="text-ink">Agentic AI & Medallion Lakehouses:</strong> Guide enterprise adoption of <strong class="text-ink">Snowflake CoWork</strong> (natural language agents), <strong class="text-ink">Cortex Code (CoCo)</strong>, and Bronze/Silver/Gold Medallion architectures.</li>
+                                    <li><strong class="text-ink">End-to-End Delivery Governance:</strong> Direct technical delivery and scope governance as acting Project Manager across 30–40% of strategic Majors accounts.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-12 sm:pl-16">
+                            <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-olive ring-4 ring-marble"></div>
+                            <div class="stoic-card rounded-xl p-6 sm:p-7">
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-mono text-olive font-medium">May 2023 – Feb 2026 • Remote</span>
+                                        <h4 class="font-serif font-bold text-2xl text-ink mt-0.5">YugabyteDB</h4>
+                                        <p class="text-sm font-semibold text-bronze">Global Director, Customer Success & Professional Services</p>
+                                    </div>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-olive-light text-olive-dark border border-olive/30 font-medium">
+                                        $30M+ Portfolio
+                                    </span>
+                                </div>
+                                <ul class="mt-4 space-y-2 text-sm text-ink-muted list-disc list-inside leading-relaxed">
+                                    <li><strong class="text-ink">Global Portfolio Leadership:</strong> Built and led a global Professional Services & Solution Architecture organization serving Fortune 500 banking, retail, streaming, and automotive clients.</li>
+                                    <li><strong class="text-ink">Top-Quartile KPI Execution:</strong> Achieved <strong class="text-ink">100% net customer retention</strong>, <strong class="text-ink">20% average NRR expansion</strong>, <strong class="text-ink">&gt;90% services attach rate</strong>, <strong class="text-ink">&gt;75% billable utilization</strong>, and 140% SA quota attainment.</li>
+                                    <li><strong class="text-ink">AI & Telemetry Systems Engineering:</strong> Designed an integrated Customer Management System across Salesforce, Zendesk, Jira, and Slack powered by analytics and AI.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-12 sm:pl-16">
+                            <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-bronze ring-4 ring-marble"></div>
+                            <div class="stoic-card rounded-xl p-6 sm:p-7">
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-mono text-bronze font-medium">Mar 2021 – Jan 2023 • Remote</span>
+                                        <h4 class="font-serif font-bold text-2xl text-ink mt-0.5">Apollo GraphQL</h4>
+                                        <p class="text-sm font-semibold text-bronze">Technical Customer Success Engineer / Project Lead</p>
+                                    </div>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-bronze-pale text-bronze border border-bronze/30 font-medium">
+                                        140% NRR Growth
+                                    </span>
+                                </div>
+                                <ul class="mt-4 space-y-2 text-sm text-ink-muted list-disc list-inside leading-relaxed">
+                                    <li>Led technical implementation programs across a $5M ARR enterprise portfolio spanning the US, Australia, and Japan, driving 140% expansion.</li>
+                                    <li>Structured architectural workshops, unblock sessions, and milestone reviews connecting platform engineering teams with Product leadership.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-12 sm:pl-16">
+                            <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-ink ring-4 ring-marble"></div>
+                            <div class="stoic-card rounded-xl p-6 sm:p-7">
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-mono text-bronze font-medium">2009 – 2021 • San Francisco, US & LATAM</span>
+                                        <h4 class="font-serif font-bold text-2xl text-ink mt-0.5">Odoo S.A. • Valet Living • Xerox • TELUS International</h4>
+                                        <p class="text-sm font-semibold text-bronze">Customer Success, Lean Six Sigma Operations & Business Analysis</p>
+                                    </div>
+                                </div>
+                                <ul class="mt-3 space-y-1.5 text-sm text-ink-muted list-disc list-inside leading-relaxed">
+                                    <li><strong class="text-ink">Odoo S.A. (2019–2021):</strong> Averaged 140% KPI attainment across US, Canada, and LATAM; awarded <strong class="text-ink">2020 President's Club</strong>.</li>
+                                    <li><strong class="text-ink">Xerox (2016–2018):</strong> Completed Lean Six Sigma Green Belt project cutting analyst onboarding time by 75% and reducing sales disputes by 50%.</li>
+                                    <li><strong class="text-ink">TELUS International (2009–2016):</strong> Led CX and operations programs increasing revenue 12% and CSAT 25%; designed training onboarding 300+ staff.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- IV. ACCOMPLISHMENTS, EDUCATION & CERTIFICATIONS -->
+                <section id="accomplishments" class="scroll-mt-10">
+                    <div class="border-b border-marble-border pb-6">
+                        <span class="text-xs font-mono uppercase tracking-widest text-terracotta font-semibold">IV • Continuous Study</span>
+                        <h3 class="mt-1 font-serif font-bold text-3xl sm:text-4xl text-ink">Accomplishments & Credentials</h3>
+                        <p class="mt-2 text-sm text-ink-muted">
+                            A “Learn-it-all” at heart—combining an <strong class="text-ink">MBA</strong> and a <strong class="text-ink">B.S. in Computer Science</strong> with specialized credentials in Generative AI, Data Science, and Process Engineering.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                        <a href="https://drive.google.com/file/d/1mwCwlwtIgm26aVORh5aa_6JS_s2cYAya/view?usp=sharing" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
+                            <img src="https://dannydev.github.io/Portfolio/images/odoo.svg" alt="Odoo President's Club" 
+                                 class="w-14 h-14 rounded-lg object-contain bg-white p-2 border border-marble-border shrink-0">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Odoo President's Club & Functional Cert</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Awarded Top CSM recognition for consistently exceeding all Customer Success KPIs (140% average attainment) and achieving Consultant-level ERP Functional Certification.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="https://coursera.org/verify/specialization/2NHZ24QQ5HTW" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
+                            <img src="https://dannydev.github.io/Portfolio/images/python.jpg" alt="Python Specialization" 
+                                 class="w-14 h-14 rounded-lg object-cover bg-white border border-marble-border shrink-0">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">University of Michigan: Python Specialization</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Verified 5-course specialization covering Python data structures, networked APIs, databases, and Pandas data analysis for automated processing and visualization.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.apollographql.com/tutorials/certifications/c11c0712-81b2-411b-97b7-80eaaa5da038" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
+                            <img src="https://dannydev.github.io/Portfolio/images/apollo.jpg" alt="Apollo Graph Developer" 
+                                 class="w-14 h-14 rounded-lg object-cover bg-white border border-marble-border shrink-0">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Apollo Graph Developer — Associate</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Verified certification in designing GraphQL schemas, running Apollo Server, and executing federated queries with Apollo Client.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="https://coursera.org/verify/specialization/34RBERYVY5WB" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
+                            <img src="https://dannydev.github.io/Portfolio/images/tableau.jpg" alt="UC Davis Tableau" 
+                                 class="w-14 h-14 rounded-lg object-cover bg-white border border-marble-border shrink-0">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">UC Davis: Data Visualization with Tableau</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Verified 5-course specialization focused on generating high-impact executive dashboards and visual data stories for business decision-making.
+                                </p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="mt-6 stoic-card rounded-xl p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="text-xs font-mono uppercase tracking-widest text-terracotta font-semibold">Academic Degrees</h5>
+                                <ul class="mt-3 space-y-2.5 text-sm text-ink">
+                                    <li class="flex items-center gap-2.5">
+                                        <i class="fa-solid fa-graduation-cap text-bronze"></i>
+                                        <span><strong>MBA</strong> (Master of Business Administration)</span>
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <i class="fa-solid fa-laptop-code text-olive"></i>
+                                        <span><strong>B.S. in Computer Science & Information Technologies</strong></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="text-xs font-mono uppercase tracking-widest text-olive font-semibold">Executive & Technical Certifications</h5>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Generative AI for Business Leaders</span>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Lean Six Sigma Green Belt</span>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Distributed SQL</span>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Data Analysis with Pandas</span>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Situational Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- V. CONTACT SECTION -->
+                <section id="contact" class="scroll-mt-10">
+                    <div class="rounded-2xl p-8 sm:p-12 text-center bg-ink text-marble border-2 border-bronze/40 shadow-xl">
+                        <span class="text-xs font-mono uppercase tracking-widest text-terracotta">V • Correspondence</span>
+                        <h3 class="mt-2 font-serif font-bold text-3xl sm:text-5xl text-marble">Ready to Accelerate Enterprise Adoption?</h3>
+                        <p class="mt-3 text-sm sm:text-base text-marble/80 max-w-xl mx-auto leading-relaxed">
+                            Whether you are scaling a Customer Success & Professional Services organization, governing a mission-critical cloud migration, or deploying Agentic AI workflows—let's connect.
+                        </p>
+                        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                            <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank"
+                               class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-terracotta hover:bg-terracotta-dark text-marble font-semibold text-sm shadow-md transition">
+                                <i class="fa-brands fa-linkedin text-base"></i>
+                                <span>Connect on LinkedIn</span>
+                            </a>
+                            <a href="mailto:dhernandezm110@gmail.com"
+                               class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-white/10 hover:bg-olive text-marble font-semibold text-sm border border-bronze/60 transition">
+                                <i class="fa-solid fa-envelope text-base text-marble"></i>
+                                <span>dhernandezm110@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="pt-6 border-t border-marble-border flex flex-col sm:flex-row items-center justify-between text-xs text-bronze font-mono gap-4">
+                    <p>© 2026 Danny Hernandez. All rights reserved.</p>
+                    <p>Designed & Engineered by <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank" class="text-terracotta hover:underline font-semibold">DannyDev</a></p>
+                </footer>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Interactive Filtering & Lens Switching Scripts -->
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+                mobileDrawer.classList.toggle('flex');
+            });
+        }
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('hidden');
+                mobileDrawer.classList.remove('flex');
+            });
+        });
+
+        function filterCapabilities(category) {
+            const cards = document.querySelectorAll('.capability-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const lensData = {
+            cs: {
+                roleTitle: 'Senior Director, CS & Services',
+                headline: 'Bridging Executive Wisdom with <span class="text-terracotta italic font-semibold">Agentic AI & Cloud Execution.</span>',
+                summary: 'I am a customer-obsessed executive and data leader with <strong class="text-ink font-semibold">15+ years of experience</strong> building enduring, high-trust relationships between enterprise organizations and cutting-edge technologies across <strong class="text-ink font-semibold">Snowflake, YugabyteDB, and Apollo GraphQL</strong>—governing $30M+ portfolios with 100% net retention and &gt;90% services attach.'
+            },
+            pm: {
+                roleTitle: 'Senior Technical Program Manager',
+                headline: 'Governing Complex Enterprise <span class="text-terracotta italic font-semibold">Cloud Migrations & AI Delivery.</span>',
+                summary: 'Results-driven Senior Technical Program & Delivery Leader with <strong class="text-ink font-semibold">15+ years of experience</strong> directing end-to-end SOW scoping, multi-tier staffing orchestration, RAID risk mitigation, and Medallion Lakehouse & Agentic AI implementations across Fortune 500 accounts.'
+            }
+        };
+
+        function setLens(mode) {
+            const btnCs = document.getElementById('lens-cs');
+            const btnPm = document.getElementById('lens-pm');
+            const roleTitle = document.getElementById('sidebar-role-title');
+            const headline = document.getElementById('hero-headline');
+            const summary = document.getElementById('hero-summary');
+
+            if (mode === 'cs') {
+                btnCs.classList.add('active');
+                btnCs.classList.remove('text-marble/70');
+                btnPm.classList.remove('active');
+                btnPm.classList.add('text-marble/70');
+            } else {
+                btnPm.classList.add('active');
+                btnPm.classList.remove('text-marble/70');
+                btnCs.classList.remove('active');
+                btnCs.classList.add('text-marble/70');
+            }
+
+            if (roleTitle) roleTitle.textContent = lensData[mode].roleTitle;
+            headline.innerHTML = lensData[mode].headline;
+            summary.innerHTML = lensData[mode].summary;
+        }
+    </script>
+</body>
 </html>
