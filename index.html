@@ -100,6 +100,13 @@
             border-right: 1px solid rgba(110, 90, 79, 0.35);
         }
 
+        /* Solid Dark Mobile Drawer to guarantee high-contrast legibility */
+        .mobile-drawer-surface {
+            background-color: #1F1F1E;
+            background-image: linear-gradient(180deg, #2B2B2A 0%, #171716 100%);
+            color: #F4F1EA;
+        }
+
         /* Sidebar Navigation States */
         .nav-link {
             border-left: 3px solid transparent;
@@ -149,7 +156,7 @@
 <body class="antialiased selection:bg-terracotta selection:text-marble-light font-sans">
 
     <!-- Mobile Top Header -->
-    <header class="lg:hidden sticky top-0 z-50 stoa-sidebar px-5 py-3.5 flex items-center justify-between border-b border-bronze/40">
+    <header class="lg:hidden sticky top-0 z-50 stoa-sidebar px-5 py-3.5 flex items-center justify-between border-b border-bronze/40 shadow-md">
         <div class="flex items-center gap-3">
             <img src="https://dannydev.github.io/Portfolio/images/portfolio_picture.jpg" 
                  onerror="this.src='https://ui-avatars.com/api/?name=Danny+Hernandez&background=C86D51&color=F4F1EA&size=128'" 
@@ -159,24 +166,63 @@
                 <p class="text-xs text-marble/75 font-mono">Developing Humans Since 2009</p>
             </div>
         </div>
-        <button id="mobile-menu-btn" class="text-marble hover:text-terracotta p-2 rounded-lg bg-white/5">
-            <i class="fa-solid fa-bars text-lg"></i>
+        <button id="mobile-menu-btn" aria-label="Toggle Navigation" class="text-marble hover:text-terracotta p-2.5 rounded-lg bg-white/10 border border-bronze/40 transition">
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
         </button>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-drawer" class="fixed inset-0 z-40 bg-ink/98 backdrop-blur-md hidden flex-col justify-between p-6 lg:hidden text-marble">
-        <div class="mt-14 space-y-2">
-            <a href="#about" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">I. About & Mission</a>
-            <a href="#capabilities" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">II. Things I Can Do (AI & CS)</a>
-            <a href="#experience" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">III. Executive Trajectory</a>
-            <a href="#accomplishments" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">IV. Accomplishments & Credentials</a>
-            <a href="#contact" class="mobile-link block px-4 py-3 rounded-lg text-xl font-serif font-semibold text-marble hover:bg-white/5">V. Connect</a>
+    <!-- Mobile Navigation Drawer (Fixed Opaque Deep Charcoal/Ink Background for High Contrast) -->
+    <div id="mobile-drawer" class="fixed inset-0 z-40 mobile-drawer-surface hidden flex-col justify-between p-6 pt-20 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="space-y-4">
+            <!-- Mobile Executive Lens Switcher -->
+            <div class="bg-black/40 p-3 rounded-xl border border-bronze/50 mb-4">
+                <p class="text-[10px] font-mono uppercase tracking-widest text-marble/70 text-center mb-2">Select Executive Lens</p>
+                <div class="grid grid-cols-2 gap-1.5 text-xs font-medium">
+                    <button onclick="setLens('cs')" id="mobile-lens-cs" class="lens-btn active py-2 px-3 rounded-lg transition text-center">
+                        CS & Services
+                    </button>
+                    <button onclick="setLens('pm')" id="mobile-lens-pm" class="lens-btn text-marble/75 hover:text-marble py-2 px-3 rounded-lg border border-white/10 transition text-center">
+                        Tech Program Mgr
+                    </button>
+                </div>
+            </div>
+
+            <!-- High-Contrast Mobile Menu Items -->
+            <nav class="space-y-2">
+                <a href="#about" class="mobile-link flex items-center gap-3 px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
+                    <span class="font-serif italic text-terracotta w-6">I.</span>
+                    <span>About & Mission</span>
+                </a>
+                <a href="#capabilities" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
+                    <div class="flex items-center gap-3">
+                        <span class="font-serif italic text-terracotta w-6">II.</span>
+                        <span>Things I Can Do</span>
+                    </div>
+                    <span class="text-[11px] font-mono bg-olive text-marble px-2.5 py-0.5 rounded-md">14 Live</span>
+                </a>
+                <a href="#experience" class="mobile-link flex items-center gap-3 px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
+                    <span class="font-serif italic text-terracotta w-6">III.</span>
+                    <span>Executive Trajectory</span>
+                </a>
+                <a href="#accomplishments" class="mobile-link flex items-center gap-3 px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
+                    <span class="font-serif italic text-terracotta w-6">IV.</span>
+                    <span>Accomplishments & Certs</span>
+                </a>
+                <a href="#contact" class="mobile-link flex items-center gap-3 px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
+                    <span class="font-serif italic text-terracotta w-6">V.</span>
+                    <span>Connect</span>
+                </a>
+            </nav>
         </div>
-        <div class="flex justify-center gap-6 py-4 border-t border-bronze/40">
-            <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank" class="text-marble/70 hover:text-terracotta text-xl"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/DannyDev" target="_blank" class="text-marble/70 hover:text-marble text-xl"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:dhernandezm110@gmail.com" class="text-marble/70 hover:text-olive text-xl"><i class="fa-solid fa-envelope"></i></a>
+
+        <div class="pt-6 mt-6 border-t border-bronze/40">
+            <div class="flex justify-center gap-5">
+                <a href="https://www.linkedin.com/in/dannydevelops/" target="_blank" class="w-11 h-11 rounded-lg bg-white/10 hover:bg-terracotta text-marble flex items-center justify-center text-lg border border-bronze/40 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/DannyDev" target="_blank" class="w-11 h-11 rounded-lg bg-white/10 hover:bg-bronze text-marble flex items-center justify-center text-lg border border-bronze/40 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:dhernandezm110@gmail.com" class="w-11 h-11 rounded-lg bg-white/10 hover:bg-olive text-marble flex items-center justify-center text-lg border border-bronze/40 transition"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://public.tableau.com/app/profile/danny.hernandez2917" target="_blank" class="w-11 h-11 rounded-lg bg-white/10 hover:bg-terracotta text-marble flex items-center justify-center text-lg border border-bronze/40 transition"><i class="fa-solid fa-chart-pie"></i></a>
+            </div>
+            <p class="mt-3 text-center text-xs font-mono text-marble/60">Walnut Creek, CA • Bilingual (EN/ES)</p>
         </div>
     </div>
 
@@ -892,19 +938,40 @@
     <!-- Interactive Filtering & Lens Switching Scripts -->
     <script>
         const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileIcon = document.getElementById('mobile-menu-icon');
         const mobileDrawer = document.getElementById('mobile-drawer');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        function toggleMobileMenu() {
+            const isHidden = mobileDrawer.classList.contains('hidden');
+            if (isHidden) {
+                mobileDrawer.classList.remove('hidden');
+                mobileDrawer.classList.add('flex');
+                if (mobileIcon) {
+                    mobileIcon.classList.remove('fa-bars');
+                    mobileIcon.classList.add('fa-xmark');
+                }
+            } else {
+                mobileDrawer.classList.add('hidden');
+                mobileDrawer.classList.remove('flex');
+                if (mobileIcon) {
+                    mobileIcon.classList.remove('fa-xmark');
+                    mobileIcon.classList.add('fa-bars');
+                }
+            }
+        }
+
         if (mobileBtn) {
-            mobileBtn.addEventListener('click', () => {
-                mobileDrawer.classList.toggle('hidden');
-                mobileDrawer.classList.toggle('flex');
-            });
+            mobileBtn.addEventListener('click', toggleMobileMenu);
         }
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileDrawer.classList.add('hidden');
                 mobileDrawer.classList.remove('flex');
+                if (mobileIcon) {
+                    mobileIcon.classList.remove('fa-xmark');
+                    mobileIcon.classList.add('fa-bars');
+                }
             });
         });
 
@@ -945,20 +1012,22 @@
         function setLens(mode) {
             const btnCs = document.getElementById('lens-cs');
             const btnPm = document.getElementById('lens-pm');
+            const mBtnCs = document.getElementById('mobile-lens-cs');
+            const mBtnPm = document.getElementById('mobile-lens-pm');
             const roleTitle = document.getElementById('sidebar-role-title');
             const headline = document.getElementById('hero-headline');
             const summary = document.getElementById('hero-summary');
 
             if (mode === 'cs') {
-                btnCs.classList.add('active');
-                btnCs.classList.remove('text-marble/70');
-                btnPm.classList.remove('active');
-                btnPm.classList.add('text-marble/70');
+                if (btnCs) { btnCs.classList.add('active'); btnCs.classList.remove('text-marble/70'); }
+                if (btnPm) { btnPm.classList.remove('active'); btnPm.classList.add('text-marble/70'); }
+                if (mBtnCs) { mBtnCs.classList.add('active'); mBtnCs.classList.remove('text-marble/75'); }
+                if (mBtnPm) { mBtnPm.classList.remove('active'); mBtnPm.classList.add('text-marble/75'); }
             } else {
-                btnPm.classList.add('active');
-                btnPm.classList.remove('text-marble/70');
-                btnCs.classList.remove('active');
-                btnCs.classList.add('text-marble/70');
+                if (btnPm) { btnPm.classList.add('active'); btnPm.classList.remove('text-marble/70'); }
+                if (btnCs) { btnCs.classList.remove('active'); btnCs.classList.add('text-marble/70'); }
+                if (mBtnPm) { mBtnPm.classList.add('active'); mBtnPm.classList.remove('text-marble/75'); }
+                if (mBtnCs) { mBtnCs.classList.remove('active'); mBtnCs.classList.add('text-marble/75'); }
             }
 
             if (roleTitle) roleTitle.textContent = lensData[mode].roleTitle;
