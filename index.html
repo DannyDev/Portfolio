@@ -171,7 +171,7 @@
         </button>
     </header>
 
-    <!-- Mobile Navigation Drawer (Fixed Opaque Deep Charcoal/Ink Background for High Contrast) -->
+    <!-- Mobile Navigation Drawer -->
     <div id="mobile-drawer" class="fixed inset-0 z-40 mobile-drawer-surface hidden flex-col justify-between p-6 pt-20 lg:hidden shadow-2xl overflow-y-auto">
         <div class="space-y-4">
             <!-- Mobile Executive Lens Switcher -->
@@ -204,9 +204,12 @@
                     <span class="font-serif italic text-terracotta w-6">III.</span>
                     <span>Executive Trajectory</span>
                 </a>
-                <a href="#accomplishments" class="mobile-link flex items-center gap-3 px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
-                    <span class="font-serif italic text-terracotta w-6">IV.</span>
-                    <span>Accomplishments & Certs</span>
+                <a href="#accomplishments" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
+                    <div class="flex items-center gap-3">
+                        <span class="font-serif italic text-terracotta w-6">IV.</span>
+                        <span>Accomplishments & Certs</span>
+                    </div>
+                    <span class="text-[11px] font-mono bg-terracotta text-marble px-2.5 py-0.5 rounded-md">8 Verified</span>
                 </a>
                 <a href="#contact" class="mobile-link flex items-center gap-3 px-4 py-3.5 rounded-xl bg-white/5 hover:bg-terracotta/20 border border-bronze/30 text-xl font-serif font-semibold text-marble transition">
                     <span class="font-serif italic text-terracotta w-6">V.</span>
@@ -279,6 +282,7 @@
                     <a href="#accomplishments" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
                         <span class="font-serif italic text-terracotta w-5">IV.</span>
                         <span>Accomplishments</span>
+                        <span class="ml-auto text-[10px] font-mono bg-terracotta/30 text-marble px-2 py-0.5 rounded border border-terracotta">8 Certs</span>
                     </a>
                     <a href="#contact" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium transition">
                         <span class="font-serif italic text-terracotta w-5">V.</span>
@@ -319,7 +323,6 @@
 
                 <!-- I. HERO & ABOUT SECTION -->
                 <section id="about" class="scroll-mt-10">
-                    <!-- Top status pill -->
                     <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-olive-light border border-olive/30 text-olive-dark text-xs font-mono font-medium mb-6">
                         <span class="w-2 h-2 rounded-full bg-olive animate-pulse"></span>
                         <span>Principal Services Solutions Manager @ Snowflake • AI, Lakehouse & Cloud Transformation</span>
@@ -332,7 +335,7 @@
                     <div class="stoic-rule my-6"></div>
 
                     <p id="hero-summary" class="text-base sm:text-lg text-ink-muted leading-relaxed max-w-3xl">
-                        I am a customer-obsessed executive and data leader with <strong class="text-ink font-semibold">15+ years of experience</strong> building enduring, high-trust relationships between enterprise organizations and cutting-edge technologies across <strong class="text-ink font-semibold">Snowflake, YugabyteDB, and Apollo GraphQL</strong>—governing $30M+ portfolios with 100% net retention and &gt;90% services attach.
+                        I am a customer-obsessed executive and data leader with <strong class="text-ink font-semibold">15+ years of experience</strong> building enduring, high-trust relationships between enterprise organizations and cutting-edge technologies across <strong class="text-ink font-semibold">Snowflake, YugabyteDB, and Apollo GraphQL</strong>—governing $30M+ portfolios with 100% net retention and &gt;50% services attach.
                     </p>
 
                     <!-- Original Mission Quote Preserved & Styled as a Classical Inscription -->
@@ -361,7 +364,7 @@
                             <p class="mt-1 text-xs font-mono uppercase tracking-wider text-bronze">Net Retention & Delivery</p>
                         </div>
                         <div class="stoic-card rounded-xl p-5 border-t-2 border-t-terracotta">
-                            <p class="text-3xl sm:text-4xl font-serif font-bold text-terracotta">&gt;90%</p>
+                            <p id="hero-stat-attach" class="text-3xl sm:text-4xl font-serif font-bold text-terracotta">&gt;50%</p>
                             <p class="mt-1 text-xs font-mono uppercase tracking-wider text-bronze">Services Attach Rate</p>
                         </div>
                         <div class="stoic-card rounded-xl p-5 border-t-2 border-t-bronze">
@@ -402,7 +405,7 @@
                     <!-- Capabilities Grid -->
                     <div id="capabilities-grid" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                        <!-- NEW AI SKILL 1 (Linked to Google Drive Blueprint) -->
+                        <!-- NEW AI SKILL 1 -->
                         <a href="https://docs.google.com/document/d/1ntPzCxumCsSDQY04LtGFkNILfmpGhNzg/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
                            class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
                             <div>
@@ -424,7 +427,7 @@
                             </div>
                         </a>
 
-                        <!-- NEW AI SKILL 2 (Linked to Google Drive Blueprint) -->
+                        <!-- NEW AI SKILL 2 -->
                         <a href="https://docs.google.com/document/d/1ntPzCxumCsSDQY04LtGFkNILfmpGhNzg/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
                            class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
                             <div>
@@ -446,7 +449,7 @@
                             </div>
                         </a>
 
-                        <!-- NEW AI SKILL 3 (Linked to Google Drive Cloud Migration Playbook) -->
+                        <!-- NEW AI SKILL 3 -->
                         <a href="https://docs.google.com/document/d/1b1Il4s4rFWWvtK34MDs10_ZS8lxtkwhW/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
                            class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
                             <div>
@@ -468,7 +471,7 @@
                             </div>
                         </a>
 
-                        <!-- NEW AI SKILL 4 (Linked to Google Drive Telemetry Engine Architecture) -->
+                        <!-- NEW AI SKILL 4 -->
                         <a href="https://docs.google.com/document/d/1VIPyHnnPUKlWNNowYSAZ3xqVvjTXlU3l/edit?usp=sharing&ouid=115383210042329167010&rtpof=true&sd=true" target="_blank"
                            class="capability-card stoic-card ai-card rounded-xl p-6 flex flex-col justify-between group" data-category="ai">
                             <div>
@@ -504,7 +507,7 @@
                                 </div>
                                 <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Develop & Implement KPI Frameworks</h4>
                                 <p class="mt-1.5 text-sm text-ink-muted leading-relaxed">
-                                    Design measurable operational metrics for NRR expansion, services attach rate (&gt;90%), and billable utilization (&gt;75%).
+                                    Design measurable operational metrics for NRR expansion, services attach rate (&gt;50%), and billable utilization (&gt;75%).
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-marble-border text-xs text-terracotta font-mono font-medium">
@@ -716,6 +719,7 @@
 
                     <div class="mt-8 space-y-6 relative before:absolute before:inset-0 before:left-4 sm:before:left-6 before:w-0.5 before:bg-gradient-to-b before:from-terracotta before:via-olive before:to-bronze/30">
 
+                        <!-- Snowflake -->
                         <div class="relative pl-12 sm:pl-16">
                             <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-terracotta ring-4 ring-marble"></div>
                             <div class="stoic-card rounded-xl p-6 sm:p-7">
@@ -737,6 +741,7 @@
                             </div>
                         </div>
 
+                        <!-- YugabyteDB -->
                         <div class="relative pl-12 sm:pl-16">
                             <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-olive ring-4 ring-marble"></div>
                             <div class="stoic-card rounded-xl p-6 sm:p-7">
@@ -752,12 +757,13 @@
                                 </div>
                                 <ul class="mt-4 space-y-2 text-sm text-ink-muted list-disc list-inside leading-relaxed">
                                     <li><strong class="text-ink">Global Portfolio Leadership:</strong> Built and led a global Professional Services & Solution Architecture organization serving Fortune 500 banking, retail, streaming, and automotive clients.</li>
-                                    <li><strong class="text-ink">Top-Quartile KPI Execution:</strong> Achieved <strong class="text-ink">100% net customer retention</strong>, <strong class="text-ink">20% average NRR expansion</strong>, <strong class="text-ink">&gt;90% services attach rate</strong>, <strong class="text-ink">&gt;75% billable utilization</strong>, and 140% SA quota attainment.</li>
+                                    <li><strong class="text-ink">Top-Quartile KPI Execution:</strong> Achieved <strong class="text-ink">100% net customer retention</strong>, <strong class="text-ink">20% average NRR expansion</strong>, <strong class="text-ink">&gt;50% services attach rate</strong>, <strong class="text-ink">&gt;75% billable utilization</strong>, and 140% SA quota attainment.</li>
                                     <li><strong class="text-ink">AI & Telemetry Systems Engineering:</strong> Designed an integrated Customer Management System across Salesforce, Zendesk, Jira, and Slack powered by analytics and AI.</li>
                                 </ul>
                             </div>
                         </div>
 
+                        <!-- Apollo GraphQL -->
                         <div class="relative pl-12 sm:pl-16">
                             <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-bronze ring-4 ring-marble"></div>
                             <div class="stoic-card rounded-xl p-6 sm:p-7">
@@ -778,6 +784,7 @@
                             </div>
                         </div>
 
+                        <!-- Odoo & Earlier Leadership -->
                         <div class="relative pl-12 sm:pl-16">
                             <div class="absolute left-1.5 sm:left-3.5 top-2 w-5 h-5 rounded-full bg-ink ring-4 ring-marble"></div>
                             <div class="stoic-card rounded-xl p-6 sm:p-7">
@@ -799,18 +806,93 @@
                     </div>
                 </section>
 
-                <!-- IV. ACCOMPLISHMENTS, EDUCATION & CERTIFICATIONS -->
+                <!-- IV. ACCOMPLISHMENTS, EDUCATION & CERTIFICATIONS (Now with 8 Verified Credential Cards) -->
                 <section id="accomplishments" class="scroll-mt-10">
-                    <div class="border-b border-marble-border pb-6">
-                        <span class="text-xs font-mono uppercase tracking-widest text-terracotta font-semibold">IV • Continuous Study</span>
-                        <h3 class="mt-1 font-serif font-bold text-3xl sm:text-4xl text-ink">Accomplishments & Credentials</h3>
-                        <p class="mt-2 text-sm text-ink-muted">
-                            A “Learn-it-all” at heart—combining an <strong class="text-ink">MBA</strong> and a <strong class="text-ink">B.S. in Computer Science</strong> with specialized credentials in Generative AI, Data Science, and Process Engineering.
-                        </p>
+                    <div class="border-b border-marble-border pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-terracotta font-semibold">IV • Continuous Study</span>
+                            <h3 class="mt-1 font-serif font-bold text-3xl sm:text-4xl text-ink">Accomplishments & Credentials</h3>
+                            <p class="mt-2 text-sm text-ink-muted max-w-2xl">
+                                A “Learn-it-all” executive mindset—combining an <strong class="text-ink">MBA</strong> and <strong class="text-ink">B.S. in Computer Science</strong> with verified credentials across Cloud Data Architecture, Enterprise Generative AI, Distributed SQL, and Analytics.
+                            </p>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 rounded bg-terracotta/10 text-terracotta border border-terracotta/30 shrink-0 self-start sm:self-auto">
+                            8 Verified Credentials
+                        </span>
                     </div>
 
+                    <!-- Highlighted Verified Accomplishments (8 Cards: 4 New at the Top + 4 Original) -->
                     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
 
+                        <!-- NEW TOP CREDENTIAL 1: SnowPro Associate -->
+                        <a href="https://achieve.snowflake.com/0536dcde-8d77-4655-a18c-682cc87fc9e8#acc.Hbk79ewW" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group border-t-2 border-t-[#29b5e8]">
+                            <div class="w-14 h-14 rounded-lg bg-white border border-marble-border flex items-center justify-center shrink-0 shadow-sm group-hover:border-[#29b5e8] transition">
+                                <i class="fa-solid fa-snowflake text-2xl text-[#29b5e8]"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">SnowPro Associate: Platform Certification</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Snowflake-verified credential certifying comprehensive mastery of Snowflake Data Cloud architecture, elastic performance scaling, data loading/unloading, virtual warehouses, and security governance.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- NEW TOP CREDENTIAL 2: Generative AI for Executives -->
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/7TV4XN4MOLPI" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group border-t-2 border-t-terracotta">
+                            <div class="w-14 h-14 rounded-lg bg-white border border-marble-border flex items-center justify-center shrink-0 shadow-sm group-hover:border-terracotta transition">
+                                <i class="fa-solid fa-brain text-2xl text-terracotta"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">Generative AI for Executives & Business Leaders</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Executive specialization covering strategic GenAI adoption, large language model integration, enterprise risk frameworks, and driving business transformation through autonomous agentic workflows.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- NEW TOP CREDENTIAL 3: YugabyteDB Distributed SQL -->
+                        <a href="https://www.credential.net/298a5630-2c55-478d-bd05-86480a70d797#acc.pXG0Dckh" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group border-t-2 border-t-[#ff6e42]">
+                            <div class="w-14 h-14 rounded-lg bg-white border border-marble-border flex items-center justify-center shrink-0 shadow-sm group-hover:border-[#ff6e42] transition">
+                                <i class="fa-solid fa-database text-2xl text-[#ff6e42]"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-terracotta transition">YugabyteDB: Basics of Distributed SQL</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Verified certification in distributed relational database architecture, PostgreSQL wire compatibility, horizontal auto-sharding, multi-region consensus (Raft), and high-availability operational topology.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- NEW TOP CREDENTIAL 4: Pandas Data Analysis -->
+                        <a href="https://www.coursera.org/account/accomplishments/verify/MPBVFGRL8ZD9" target="_blank"
+                           class="stoic-card rounded-xl p-5 flex gap-4 items-start group border-t-2 border-t-olive">
+                            <div class="w-14 h-14 rounded-lg bg-white border border-marble-border flex items-center justify-center shrink-0 shadow-sm group-hover:border-olive transition">
+                                <i class="fa-solid fa-table-cells text-2xl text-olive"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-serif font-bold text-xl text-ink group-hover:text-olive transition">Mastering Data Analysis with Pandas</h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-olive"></i>
+                                </div>
+                                <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                                    Verified specialization covering advanced Python/Pandas data wrangling, multi-index aggregation, cross-system telemetry joins, and programmatic data pipeline orchestration for enterprise analytics.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- ORIGINAL CREDENTIAL 1: Odoo President's Club -->
                         <a href="https://drive.google.com/file/d/1mwCwlwtIgm26aVORh5aa_6JS_s2cYAya/view?usp=sharing" target="_blank"
                            class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
                             <img src="https://dannydev.github.io/Portfolio/images/odoo.svg" alt="Odoo President's Club" 
@@ -826,6 +908,7 @@
                             </div>
                         </a>
 
+                        <!-- ORIGINAL CREDENTIAL 2: Python Specialization -->
                         <a href="https://coursera.org/verify/specialization/2NHZ24QQ5HTW" target="_blank"
                            class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
                             <img src="https://dannydev.github.io/Portfolio/images/python.jpg" alt="Python Specialization" 
@@ -836,11 +919,12 @@
                                     <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
                                 </div>
                                 <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
-                                    Verified 5-course specialization covering Python data structures, networked APIs, databases, and Pandas data analysis for automated processing and visualization.
+                                    Verified 5-course specialization covering Python data structures, networked APIs, databases, and automated data processing and visualization algorithms.
                                 </p>
                             </div>
                         </a>
 
+                        <!-- ORIGINAL CREDENTIAL 3: Apollo GraphQL -->
                         <a href="https://www.apollographql.com/tutorials/certifications/c11c0712-81b2-411b-97b7-80eaaa5da038" target="_blank"
                            class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
                             <img src="https://dannydev.github.io/Portfolio/images/apollo.jpg" alt="Apollo Graph Developer" 
@@ -851,11 +935,12 @@
                                     <i class="fa-solid fa-arrow-up-right-from-square text-xs text-bronze group-hover:text-terracotta"></i>
                                 </div>
                                 <p class="mt-1 text-xs sm:text-sm text-ink-muted leading-relaxed">
-                                    Verified certification in designing GraphQL schemas, running Apollo Server, and executing federated queries with Apollo Client.
+                                    Verified certification in designing federated GraphQL schemas, running Apollo Server, and orchestrating high-throughput queries with Apollo Client.
                                 </p>
                             </div>
                         </a>
 
+                        <!-- ORIGINAL CREDENTIAL 4: UC Davis Tableau -->
                         <a href="https://coursera.org/verify/specialization/34RBERYVY5WB" target="_blank"
                            class="stoic-card rounded-xl p-5 flex gap-4 items-start group">
                             <img src="https://dannydev.github.io/Portfolio/images/tableau.jpg" alt="UC Davis Tableau" 
@@ -873,6 +958,7 @@
 
                     </div>
 
+                    <!-- Degrees & Additional Certifications Pill Matrix -->
                     <div class="mt-6 stoic-card rounded-xl p-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -889,13 +975,12 @@
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-xs font-mono uppercase tracking-widest text-olive font-semibold">Executive & Technical Certifications</h5>
+                                <h5 class="text-xs font-mono uppercase tracking-widest text-olive font-semibold">Leadership & Operations Credentials</h5>
                                 <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Generative AI for Business Leaders</span>
                                     <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Lean Six Sigma Green Belt</span>
-                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Distributed SQL</span>
-                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Data Analysis with Pandas</span>
                                     <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">Situational Leadership</span>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">ERP Functional Implementation</span>
+                                    <span class="text-xs font-mono px-3 py-1 rounded bg-marble-dark border border-marble-border text-ink">MEDDIC / MEDICC Governance</span>
                                 </div>
                             </div>
                         </div>
@@ -1000,12 +1085,12 @@
             cs: {
                 roleTitle: 'Senior Director, CS & Services',
                 headline: 'Bridging Executive Wisdom with <span class="text-terracotta italic font-semibold">Agentic AI & Cloud Execution.</span>',
-                summary: 'I am a customer-obsessed executive and data leader with <strong class="text-ink font-semibold">15+ years of experience</strong> building enduring, high-trust relationships between enterprise organizations and cutting-edge technologies across <strong class="text-ink font-semibold">Snowflake, YugabyteDB, and Apollo GraphQL</strong>—governing $30M+ portfolios with 100% net retention and &gt;90% services attach.'
+                summary: 'I am a customer-obsessed executive and data leader with <strong class="text-ink font-semibold">15+ years of experience</strong> building enduring, high-trust relationships between enterprise organizations and cutting-edge technologies across <strong class="text-ink font-semibold">Snowflake, YugabyteDB, and Apollo GraphQL</strong>—governing $30M+ portfolios with 100% net retention and &gt;50% services attach.'
             },
             pm: {
                 roleTitle: 'Senior Technical Program Manager',
                 headline: 'Governing Complex Enterprise <span class="text-terracotta italic font-semibold">Cloud Migrations & AI Delivery.</span>',
-                summary: 'Results-driven Senior Technical Program & Delivery Leader with <strong class="text-ink font-semibold">15+ years of experience</strong> directing end-to-end SOW scoping, multi-tier staffing orchestration, RAID risk mitigation, and Medallion Lakehouse & Agentic AI implementations across Fortune 500 accounts.'
+                summary: 'Results-driven Senior Technical Program & Delivery Leader with <strong class="text-ink font-semibold">15+ years of experience</strong> directing end-to-end SOW scoping, multi-tier staffing orchestration, RAID risk mitigation, and Medallion Lakehouse & Agentic AI implementations across Fortune 500 accounts—achieving 100% delivery success and &gt;50% services attach.'
             }
         };
 
@@ -1030,9 +1115,11 @@
                 if (mBtnCs) { mBtnCs.classList.remove('active'); mBtnCs.classList.add('text-marble/75'); }
             }
 
+            const statAttach = document.getElementById('hero-stat-attach');
             if (roleTitle) roleTitle.textContent = lensData[mode].roleTitle;
             headline.innerHTML = lensData[mode].headline;
             summary.innerHTML = lensData[mode].summary;
+            if (statAttach) statAttach.innerHTML = '&gt;50%';
         }
     </script>
 </body>
